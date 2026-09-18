@@ -1,0 +1,55 @@
+/* AgriMarket — responsive layer (Bootstrap-compatible breakpoints) */
+@media (max-width:1199px){
+  .products-grid{grid-template-columns:repeat(3,1fr)}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:991px){
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--card);
+    flex-direction:column;align-items:stretch;padding:12px;border-bottom:1px solid var(--line);box-shadow:var(--sh-lg)}
+  .nav-links.open{display:flex}
+  .hamburger{display:grid}
+  .hero-grid{grid-template-columns:1fr;padding:36px 0}
+  .hero-visual{order:-1}
+  .fc-1{left:8px}.fc-2{right:8px}
+  .shop-layout{grid-template-columns:1fr}
+  .filters{position:fixed;inset:auto 0 0 0;top:80px;z-index:1200;border-radius:20px 20px 0 0;overflow-y:auto;display:none;box-shadow:var(--sh-lg)}
+  .filters.open{display:block}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(2,1fr)}
+  .how-grid{grid-template-columns:repeat(2,1fr)} .why-grid{grid-template-columns:1fr 1fr}
+  .stats-band{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .dash{grid-template-columns:1fr}
+  .side{position:static;height:auto;display:flex;overflow-x:auto;gap:4px;padding:10px;border-right:0;border-bottom:1px solid var(--line)}
+  .side a{white-space:nowrap}
+  .dash-main{padding:16px}
+}
+@media (max-width:767px){
+  .section{padding:40px 0}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .products-grid.list .p-card{flex-direction:column}
+  .products-grid.list .p-media{width:100%;min-height:150px}
+  .hero-search{flex-direction:column} .hero-search .btn{width:100%}
+  .trust-row{gap:16px}
+  .cta-band{padding:36px 20px}
+  #assistant{left:12px;right:12px;width:auto}
+  #assistant-fab{left:14px;bottom:16px}
+  #toasts{right:12px;left:12px;bottom:86px;max-width:none}
+  .compare-tray{flex-wrap:wrap;justify-content:center}
+}
+@media (max-width:575px){
+  .container{padding:0 14px}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .p-body{padding:11px} .p-name{font-size:.88rem} .p-actions{flex-direction:column}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .how-grid,.why-grid,.stats-band{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+  .nav-actions .btn span.txt{display:none}
+  .float-card{font-size:.72rem;padding:8px 10px}
+}
+@media (min-width:992px){ .only-mobile{display:none!important} }
+@media (max-width:991px){ .only-desktop{display:none!important} }
+@media (max-width:991px){.products-grid.cols-4{grid-template-columns:repeat(2,1fr)}}
