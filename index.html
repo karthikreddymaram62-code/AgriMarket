@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgriMarket — Agricultural Products Marketplace | From Farm to Your Doorstep</title>
+<meta name="description" content="Buy fresh agricultural products directly from trusted farmers through AgriMarket. Discover vegetables, fruits, grains, organic products and more.">
+<meta property="og:title" content="AgriMarket — From Farm to Your Doorstep">
+<meta property="og:description" content="Empowering Farmers. Connecting Markets. Delivering Freshness.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+<!-- HERO -->
+<header class="hero"><div class="container hero-grid">
+  <div>
+    <span class="eyebrow">🌾 Telangana's farm-direct marketplace</span>
+    <h1>Fresh From Farmers. <span class="hl">Directly To You.</span></h1>
+    <p class="lead">Skip the middlemen. Buy vegetables, fruits, grains & organic produce straight from verified farmers — fair prices for them, farm freshness for you.</p>
+    <div class="hero-search" role="search">
+      <input id="hero-q" placeholder="Search mangoes, turmeric, A2 milk…" aria-label="Search products" autocomplete="off">
+      <button class="btn btn-primary" id="hero-go">🔍 Search</button>
+      <div class="suggest" id="hero-suggest"></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="products.html">🛒 Shop Products</a>
+      <a class="btn btn-gold btn-lg" href="register.html?role=farmer">🚜 Sell Your Produce</a>
+    </div>
+    <div class="trust-row">
+      <div><b>✔ FSSAI-aware</b><span>Graded & sorted</span></div>
+      <div><b>🚚 2–4 day</b><span>Farm-gate dispatch</span></div>
+      <div><b>💰 Fair price</b><span>Farmers keep ~92%</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="float-card fc-1"><span style="font-size:1.6rem">🥭</span><span>Banganapalli Mango<small>⭐ 4.9 • 187 reviews</small></span></div>
+    <div class="hero-card-main"><div class="farm-art"><span class="big">🚜</span></div>
+      <div class="flex between" style="padding:14px 18px"><span><b>Today's harvest</b><br><small class="muted">1,240 kg listed in last 24 hrs</small></span><a class="btn btn-outline btn-sm" href="products.html">Explore →</a></div>
+    </div>
+    <div class="float-card fc-2"><span style="font-size:1.6rem">🧑‍🌾</span><span>Ramesh Patel<small>✔ Verified • Nalgonda</small></span></div>
+  </div>
+</div></header>
+
+<main class="container">
+  <!-- TRUST STATISTICS -->
+  <section class="section-sm" aria-label="Trust statistics"><div class="stats-band reveal">
+    <div class="stat"><b><span data-count="2400" data-suffix="+">0</span></b><span>Verified farmers</span></div>
+    <div class="stat"><b><span data-count="18500" data-suffix="+">0</span></b><span>Happy customers</span></div>
+    <div class="stat"><b><span data-count="52000" data-suffix="+">0</span></b><span>Orders delivered</span></div>
+    <div class="stat"><b>★ <span data-count="48" data-suffix="">0</span>/50</b><span>Average rating (4.8)</span></div>
+  </div></section>
+
+  <!-- CATEGORIES -->
+  <section class="section-sm"><div class="flex between wrap">
+    <div><span class="eyebrow">🗂️ Categories</span><h2 class="section-title">Shop by category</h2></div>
+    <a class="btn btn-outline btn-sm" href="categories.html">View all 12 →</a></div>
+    <div class="grid grid-4" id="home-cats"></div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section-sm"><div class="flex between wrap">
+    <div><span class="eyebrow">⭐ Featured</span><h2 class="section-title">Loved by customers</h2></div>
+    <a class="btn btn-outline btn-sm" href="products.html">Open marketplace →</a></div>
+    <div class="products-grid cols-4" id="home-feat"></div>
+  </section>
+
+  <!-- RECENTLY VIEWED -->
+  <section class="section-sm" id="recent-sec" style="display:none">
+    <span class="eyebrow">👁️ Recently viewed</span><h2 class="section-title">Pick up where you left off</h2>
+    <div class="products-grid cols-4" id="home-recent"></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-sm" id="how"><div class="center">
+    <span class="eyebrow">⚙️ How it works</span><h2 class="section-title">Farm to doorstep in 4 steps</h2></div>
+    <div class="how-grid" style="margin-top:20px">
+      <div class="card how-card reveal"><span class="how-num">01</span><span class="how-ico">🔍</span><b>Discover</b><p class="small muted">Search 500+ products by crop, farmer or village.</p></div>
+      <div class="card how-card reveal"><span class="how-num">02</span><span class="how-ico">🛒</span><b>Order</b><p class="small muted">Cart, bulk quotes & UPI/COD checkout.</p></div>
+      <div class="card how-card reveal"><span class="how-num">03</span><span class="how-ico">🌅</span><b>Harvest</b><p class="small muted">Farmers harvest after your order — never cold-stored weeks.</p></div>
+      <div class="card how-card reveal"><span class="how-num">04</span><span class="how-ico">🚚</span><b>Delivered</b><p class="small muted">Track live from farm-gate to your door.</p></div>
+    </div></section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section-sm"><div class="center">
+    <span class="eyebrow">💚 Why AgriMarket</span><h2 class="section-title">Built for farmers & families</h2></div>
+    <div class="why-grid" style="margin-top:20px">
+      <div class="card card-pad reveal"><div style="font-size:2rem">🤝</div><h3>Zero middlemen</h3><p class="small muted">Farmers keep ~92% of what you pay — 2× the mandi rate. Every order directly supports a rural family.</p></div>
+      <div class="card card-pad reveal"><div style="font-size:2rem">🔬</div><h3>Know Your Farmer</h3><p class="small muted">Full traceability: farm location → farmer → harvest date → quality check → your plate.</p></div>
+      <div class="card card-pad reveal"><div style="font-size:2rem">🌱</div><h3>Truly fresh</h3><p class="small muted">Harvest-on-order model. Average farm-to-door time is 48 hours, not 3 weeks.</p></div>
+      <div class="card card-pad reveal"><div style="font-size:2rem">⚖️</div><h3>Transparent pricing</h3><p class="small muted">Live mandi reference rates on every product. No hidden margins, no fake discounts.</p></div>
+      <div class="card card-pad reveal"><div style="font-size:2rem">📦</div><h3>Bulk for business</h3><p class="small muted">Hotels, hostels & retailers get farm-gate bulk quotes with GST invoices.</p></div>
+      <div class="card card-pad reveal"><div style="font-size:2rem">🛡️</div><h3>Buyer protection</h3><p class="small muted">Easy cancellation, quality refunds and human support in Telugu, Hindi & English.</p></div>
+    </div></section>
+
+  <!-- FEATURED FARMERS -->
+  <section class="section-sm"><div class="flex between wrap">
+    <div><span class="eyebrow">🧑‍🌾 Farmers</span><h2 class="section-title">Meet your growers</h2></div>
+    <a class="btn btn-outline btn-sm" href="farmers.html">All farmers →</a></div>
+    <div class="grid grid-4" id="home-farmers"></div>
+  </section>
+
+  <!-- MARKET PRICES -->
+  <section class="section-sm" id="prices">
+    <span class="eyebrow">📈 Mandi rates</span><h2 class="section-title">Today's market prices</h2>
+    <p class="section-sub">Reference mandi rates (demo data) so you always know you're paying fair. <span class="badge b-grey">eNAM-ready API</span></p>
+    <div class="ticker" aria-hidden="true"><span class="ticker-track" id="ticker-track"></span></div>
+    <div class="grid grid-2" style="grid-template-columns:1.4fr 1fr;align-items:start">
+      <div class="table-wrap"><table class="data"><tr><th>Crop / Mandi</th><th>Price</th><th>Trend</th><th>Signal</th></tr><tbody id="market-table"></tbody></table></div>
+      <div class="card card-pad" id="weather-card"></div>
+    </div></section>
+
+  <!-- AGRICULTURE UPDATES -->
+  <section class="section-sm"><span class="eyebrow">📰 Agri updates</span><h2 class="section-title">Agriculture this week</h2>
+    <div class="grid grid-3" id="home-updates"></div></section>
+
+  <!-- GOVERNMENT SCHEMES -->
+  <section class="section-sm" id="schemes">
+    <span class="eyebrow">🏛️ Sarkari support</span><h2 class="section-title">Government schemes for farmers</h2>
+    <div class="grid grid-3" id="home-schemes"></div></section>
+
+  <!-- REVIEWS -->
+  <section class="section-sm"><div class="center">
+    <span class="eyebrow">⭐ 4.8 / 5 from 18,500+ buyers</span><h2 class="section-title">Customers love the freshness</h2></div>
+    <div class="grid grid-3" id="home-reviews" style="margin-top:20px"></div></section>
+
+  <!-- CTA -->
+  <section class="section"><div class="cta-band reveal">
+    <h2>Ready for real farm freshness?</h2>
+    <p>Join 18,500+ families buying direct — or 2,400+ farmers earning more.</p>
+    <div class="flex wrap" style="justify-content:center;margin-top:18px">
+      <a class="btn btn-gold btn-lg" href="products.html">🛒 Start shopping</a>
+      <a class="btn btn-lg" style="background:#fff;color:var(--brand-800)" href="register.html?role=farmer">🚜 Become a seller</a>
+    </div></div></section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/services.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

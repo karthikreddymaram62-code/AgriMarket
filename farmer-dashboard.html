@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farmer Dashboard | AgriMarket</title>
+<meta name="description" content="Sell, manage inventory, orders and earnings.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="farmer">
+<div class="dash">
+  <aside class="side" id="f-side"></aside>
+  <div class="dash-main">
+    <div class="f-pane" id="fp-ov"></div>
+    <div class="f-pane" id="fp-prods" style="display:none"></div>
+    <div class="f-pane" id="fp-add" style="display:none"></div>
+    <div class="f-pane" id="fp-orders" style="display:none"></div>
+    <div class="f-pane" id="fp-inv" style="display:none"></div>
+    <div class="f-pane" id="fp-cust" style="display:none"></div>
+    <div class="f-pane" id="fp-earn" style="display:none"></div>
+    <div class="f-pane" id="fp-rev" style="display:none"></div>
+    <div class="f-pane" id="fp-analytics" style="display:none">
+      <div class="dash-head"><h2>Analytics 📈</h2><span class="badge b-grey">demo data</span></div>
+      <div class="grid grid-2"><div class="panel"><h3>Revenue by month</h3><canvas class="chart" id="ch-rev"></canvas></div>
+      <div class="panel"><h3>Orders by month</h3><canvas class="chart" id="ch-ord"></canvas></div></div>
+      <div class="panel"><h3>🏆 Top products by revenue</h3><div id="ch-top"></div></div>
+      <div class="legend"><span><i style="background:#22a866"></i>Revenue</span><span><i style="background:#e9a817"></i>Orders</span></div>
+    </div>
+    <div class="f-pane" id="fp-set" style="display:none"></div>
+  </div>
+</div>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/auth.js"></script><script src="js/farmer.js"></script>
+</body>
+</html>

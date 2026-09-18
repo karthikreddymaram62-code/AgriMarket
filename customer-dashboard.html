@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Dashboard | AgriMarket</title>
+<meta name="description" content="Customer dashboard: orders, wishlist, addresses, reviews and more.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="customer">
+<main class="container section-sm">
+  <div class="dash-head"><div><span class="role-pill">Customer</span><h2>Namaste, <span id="c-name">friend</span>! 👋</h2><p>Everything fresh, in one place.</p></div>
+  <a class="btn btn-primary btn-sm" href="products.html">🛒 Shop more</a></div>
+  <div class="kpi-grid" id="kpi"></div>
+  <div class="tabs" id="c-tabs">
+    <button data-t="overview" class="on">🏠 Overview</button><button data-t="orders">📦 Orders</button>
+    <button data-t="wish">❤️ Wishlist</button><button data-t="addr">📍 Addresses</button>
+    <button data-t="rev">⭐ My reviews</button><button data-t="notif">🔔 Alerts</button>
+    <button data-t="saved">💚 Saved farmers</button><button data-t="recent">👁️ Viewed</button><button data-t="prof">👤 Profile</button>
+  </div>
+  <div class="c-pane" id="pane-overview"><div class="grid grid-2">
+    <div class="panel"><h3>📦 Recent orders</h3><div id="ov-orders"></div><a class="btn btn-outline btn-sm" href="orders.html">All orders →</a></div>
+    <div class="panel"><h3>✨ Recommended for you</h3><div class="grid" id="ov-rec"></div></div></div></div>
+  <div class="c-pane" id="pane-orders" style="display:none"></div>
+  <div class="c-pane" id="pane-wish" style="display:none"></div>
+  <div class="c-pane" id="pane-addr" style="display:none"></div>
+  <div class="c-pane" id="pane-rev" style="display:none"></div>
+  <div class="c-pane" id="pane-notif" style="display:none"></div>
+  <div class="c-pane" id="pane-saved" style="display:none"></div>
+  <div class="c-pane" id="pane-recent" style="display:none"></div>
+  <div class="c-pane" id="pane-prof" style="display:none"><form id="prof-form" class="panel"></form></div>
+</main>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/auth.js"></script><script src="js/customer.js"></script>
+</body>
+</html>

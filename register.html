@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join AgriMarket | Register</title>
+<meta name="description" content="Create a customer or farmer account on AgriMarket.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="register">
+<main class="container section-sm" style="max-width:720px">
+  <div class="bcrumbs"><a href="index.html">Home</a> / <b>Register</b></div>
+  <div class="center"><span class="eyebrow">🎉 Free forever</span><h1>Join AgriMarket</h1></div>
+  <div class="tabs" style="justify-content:center"><button id="role-cust" class="on">🧑 I'm a buyer</button><button id="role-farm">🧑‍🌾 I'm a farmer</button></div>
+  <div class="card card-pad">
+    <form id="reg-form" data-role="customer" novalidate>
+      <div class="form-row">
+        <div class="field"><label>Full name <span class="req">*</span></label><input class="input" name="name" required></div>
+        <div class="field"><label>Mobile <span class="req">*</span></label><input class="input" name="phone" required placeholder="10-digit"></div></div>
+      <div class="field"><label>Email <span class="req">*</span></label><input class="input" name="email" type="email" required></div>
+      <div class="form-row">
+        <div class="field"><label>Password <span class="req">*</span></label><input class="input" name="pass" type="password" required placeholder="6+ characters"></div>
+        <div class="field"><label>Confirm <span class="req">*</span></label><input class="input" name="pass2" type="password" required></div></div>
+      <div id="farmer-extra" style="display:none">
+        <h3>🚜 Farm details</h3>
+        <div class="form-row">
+          <div class="field"><label>Farm name</label><input class="input" name="farm" placeholder="e.g. Green Acres"></div>
+          <div class="field"><label>Village</label><input class="input" name="village"></div></div>
+        <div class="form-row">
+          <div class="field"><label>District</label><select class="input" name="district"><option>Nalgonda</option><option>Suryapet</option><option>Khammam</option><option>Warangal</option><option>Karimnagar</option><option>Hyderabad</option><option>Medak</option><option>Sangareddy</option></select></div>
+          <div class="field"><label>Farm size</label><input class="input" name="size" placeholder="e.g. 5 acres"></div></div>
+        <div class="form-row">
+          <div class="field"><label>Main crops</label><input class="input" name="crops" placeholder="Tomato, Paddy…"></div>
+          <div class="field"><label>Method</label><select class="input" name="method"><option>Natural</option><option>Organic</option><option>Conventional</option></select></div></div>
+      </div>
+      <button class="btn btn-primary btn-block">Create account 🎉</button>
+      <p class="small center" style="margin-top:10px">Already a member? <a href="login.html"><b>Login</b></a></p>
+    </form>
+  </div>
+</main>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/auth.js"></script>
+</body>
+</html>

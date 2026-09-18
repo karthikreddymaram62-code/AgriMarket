@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | AgriMarket</title>
+<meta name="description" content="Demo checkout: address, delivery, payment and confirmation.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="checkout">
+<main class="container section-sm" id="ck-main">
+  <div class="bcrumbs"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <b>Checkout</b></div>
+  <h1>Checkout 🔒</h1>
+  <div class="steps">
+    <div class="step" data-n="1">📍 Address</div><div class="step" data-n="2">🚚 Delivery</div>
+    <div class="step" data-n="3">💳 Payment</div><div class="step" data-n="4">🎉 Done</div>
+  </div>
+  <div class="grid grid-2" style="grid-template-columns:1.5fr 1fr;align-items:start">
+    <div>
+      <div id="ck-addr" class="card card-pad">
+        <h3>📍 Delivery address</h3><div id="saved-addr"></div>
+        <details style="margin:10px 0"><summary><b>➕ Use a new address</b></summary>
+        <form id="addr-form" style="margin-top:12px"><div class="form-row">
+          <div class="field"><label>Full name <span class="req">*</span></label><input class="input" name="name" required></div>
+          <div class="field"><label>Phone <span class="req">*</span></label><input class="input" name="phone" required placeholder="10-digit mobile"></div></div>
+          <div class="field"><label>House / street <span class="req">*</span></label><input class="input" name="line" required></div>
+          <div class="form-row"><div class="field"><label>District</label><select class="input" id="ck-dist" name="district"></select></div>
+          <div class="field"><label>Mandal</label><select class="input" id="ck-mandal" name="mandal"><option value="">Mandal</option></select></div></div>
+          <div class="form-row"><div class="field"><label>Village</label><select class="input" id="ck-village" name="village"><option value="">Village</option></select></div>
+          <div class="field"><label>PIN</label><input class="input" name="pin" placeholder="500001"></div></div>
+        </form></details>
+        <button class="btn btn-primary" id="to-del">Continue to delivery →</button>
+      </div>
+      <div id="ck-del" class="card card-pad" style="display:none">
+        <h3>🚚 Delivery method</h3>
+        <label class="check addr-card" style="margin-bottom:8px"><input type="radio" name="del" value="Standard Delivery" checked> <span><b>Standard (3–5 days)</b> — ₹40, free over ₹499</span></label>
+        <label class="check addr-card" style="margin-bottom:8px"><input type="radio" name="del" value="Express Delivery"> <span><b>⚡ Express (1–2 days)</b> — ₹99</span></label>
+        <label class="check addr-card"><input type="radio" name="del" value="Farmer Pickup"> <span><b>🏠 Farmer pickup</b> — Free, collect from farm</span></label>
+        <div class="flex" style="margin-top:14px"><button class="btn btn-ghost" id="back-addr">← Back</button><button class="btn btn-primary" id="to-pay">Continue to payment →</button></div>
+      </div>
+      <div id="ck-pay" class="card card-pad" style="display:none">
+        <h3>💳 Payment <span class="badge b-gold">DEMO — no real charge</span></h3>
+        <label class="check addr-card" style="margin-bottom:8px"><input type="radio" name="pay" value="UPI" checked> <span><b>📱 UPI</b> — GPay / PhonePe / Paytm</span></label>
+        <div id="pay-upi" class="field"><label>UPI ID</label><input class="input" placeholder="name@upi"></div>
+        <label class="check addr-card" style="margin-bottom:8px"><input type="radio" name="pay" value="Credit/Debit Card"> <span><b>💳 Credit / Debit card</b></span></label>
+        <div id="pay-card" style="display:none"><div class="field"><label>Card number</label><input class="input" placeholder="1234 5678 9012 3456" inputmode="numeric"></div>
+        <div class="form-row"><div class="field"><label>Expiry</label><input class="input" placeholder="MM/YY"></div><div class="field"><label>CVV</label><input class="input" placeholder="•••" type="password"></div></div></div>
+        <label class="check addr-card" style="margin-bottom:8px"><input type="radio" name="pay" value="Net Banking"> <span><b>🏦 Net banking</b></span></label>
+        <div id="pay-net" style="display:none" class="field"><label>Bank</label><select class="input"><option>SBI</option><option>HDFC</option><option>ICICI</option><option>Union Bank</option></select></div>
+        <label class="check addr-card"><input type="radio" name="pay" value="Cash on Delivery"> <span><b>💵 Cash on delivery</b></span></label>
+        <div class="flex" style="margin-top:14px"><button class="btn btn-ghost" id="back-del">← Back</button><button class="btn btn-gold" id="place-order">Place order 🎉</button></div>
+      </div>
+      <div id="ck-done" class="card card-pad" style="display:none"><div id="done-box"></div></div>
+    </div>
+    <div class="card card-pad"><h3>Your items</h3><div id="ck-items"></div>
+      <div class="flex between small" style="margin-top:10px"><span>Subtotal</span><b id="ck-sub"></b></div>
+      <div class="flex between small"><span>Delivery</span><b id="ck-fee"></b></div>
+      <div class="flex between" style="font-size:1.2rem"><span><b>Total</b></span><b id="ck-total"></b></div></div>
+  </div>
+</main>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/cart.js"></script>
+</body>
+</html>

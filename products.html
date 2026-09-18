@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace — Shop Farm Products | AgriMarket</title>
+<meta name="description" content="Search, filter and compare fresh farm products by category, price, rating and location.">
+<meta property="og:title" content="AgriMarket Marketplace">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="products">
+<main class="container section-sm">
+  <div class="bcrumbs"><a href="index.html">Home</a> / <b>Marketplace</b></div>
+  <h1>Marketplace 🛒</h1>
+  <p class="muted">Search updates live as you type — no page reloads.</p>
+  <div class="toolbar">
+    <div class="hero-search" style="flex:1;min-width:220px;max-width:480px">
+      <input id="q" placeholder="Search product, farmer, village…" aria-label="Search products" autocomplete="off">
+      <div class="suggest" id="q-suggest"></div>
+    </div>
+    <button class="btn btn-outline btn-sm only-mobile" id="filter-fab">🎛️ Filters</button>
+    <span class="spacer"></span>
+    <span class="small muted" id="result-count"></span>
+    <select class="input" id="sort" style="width:auto;min-height:42px" aria-label="Sort">
+      <option value="pop">Sort: Popular</option><option value="lo">Price: Low → High</option>
+      <option value="hi">Price: High → Low</option><option value="rate">Top rated</option><option value="new">Newest harvest</option>
+    </select>
+    <span class="view-toggle"><button id="v-grid" class="on" aria-label="Grid view">▦</button><button id="v-list" aria-label="List view">☰</button></span>
+  </div>
+  <div class="shop-layout">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="flex between"><h3>🎛️ Filters</h3><button class="btn btn-ghost btn-sm" id="clear-f">Clear</button></div>
+      <div class="f-group"><label class="lbl">Category</label><div id="f-cats"></div></div>
+      <div class="f-group"><label class="lbl">Max price: <b id="max-label">₹8,000</b></label>
+        <input type="range" id="max-price" min="30" max="8000" step="10" value="8000" aria-label="Maximum price"></div>
+      <div class="f-group"><label class="lbl">District</label><select class="input" id="f-districts"></select></div>
+      <div class="f-group"><label class="lbl">Rating</label>
+        <label class="check"><input type="radio" name="fr" value="0" checked> All</label>
+        <label class="check"><input type="radio" name="fr" value="4.5"> ⭐ 4.5+</label>
+        <label class="check"><input type="radio" name="fr" value="4.7"> ⭐ 4.7+</label></div>
+      <div class="f-group"><label class="lbl">Availability</label>
+        <select class="input" id="f-avail"><option value="">All</option><option value="in">In stock only</option></select></div>
+      <div class="f-group"><label class="check"><input type="checkbox" id="f-organic"> 🌱 Organic only</label></div>
+    </aside>
+    <div><div class="products-grid" id="results"></div><div class="pagination" id="pages"></div></div>
+  </div>
+</main>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/products.js"></script>
+</body>
+</html>

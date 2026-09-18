@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart & Wishlist | AgriMarket</title>
+<meta name="description" content="Your cart, saved-for-later and wishlist.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="cart">
+<main class="container section-sm">
+  <div class="bcrumbs"><a href="index.html">Home</a> / <b>Cart</b></div>
+  <h1>Your cart 🛒</h1>
+  <div class="grid grid-2" style="grid-template-columns:1.5fr 1fr;align-items:start">
+    <div>
+      <div id="cart-items"></div>
+      <button class="btn btn-ghost btn-sm" id="clear-cart">🗑️ Clear cart</button>
+      <div id="later-sec" style="margin-top:18px"><h3>💾 Saved for later</h3><div class="flex wrap" id="later-items"></div></div>
+      <div id="wish-sec" style="margin-top:18px"><h3>❤️ Wishlist</h3><div class="flex wrap" id="wish-items"></div></div>
+    </div>
+    <div class="card card-pad" style="position:sticky;top:calc(var(--nav-h) + 16px)">
+      <h3>Order summary</h3>
+      <p class="small" id="free-bar"></p>
+      <div class="stock-bar" style="margin-bottom:12px"><i id="free-fill" style="width:0"></i></div>
+      <div class="flex between small"><span>Subtotal</span><b id="sum-sub">₹0</b></div>
+      <div class="flex between small"><span>Delivery</span><b id="sum-del">₹0</b></div>
+      <div class="flex between small"><span>Discount (10% over ₹999)</span><b id="sum-disc">₹0</b></div>
+      <div class="flex between" style="font-size:1.25rem;margin:10px 0"><span><b>Total</b></span><b id="sum-total">₹0</b></div>
+      <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to checkout →</button>
+      <p class="small muted center" style="margin-top:10px">🔒 Demo checkout — no real payment.</p>
+    </div>
+  </div>
+</main>
+<script src="js/data.js"></script><script src="js/services.js"></script><script src="js/common.js"></script><script src="js/cart.js"></script>
+</body>
+</html>
